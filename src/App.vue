@@ -7,6 +7,7 @@
         ref="ipt"
         @focus="q = ''"
         :placeholder="placeholder"
+        clearable
       />
       <el-button type="primary" @click="translate"> 回车或点此翻译 </el-button>
       <div class="result">
@@ -18,6 +19,7 @@
 
 <script setup>
 import axios from "axios";
+
 import Qs from "qs";
 import { ElMessage } from "element-plus";
 import MD5 from "md5";
