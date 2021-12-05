@@ -11,6 +11,9 @@
           回车或点此翻译
         </el-button>
         <div class="result">变量名为:<span>{{r}}</span></div>
+        <div>
+          <span>{{r}}</span>
+        </div>
       </el-card>
   </div>
 </template>
@@ -48,7 +51,7 @@
       data: Qs.stringify(data)
     })
     if(!q.value){
-      console.log(placeholder)
+      console.log(placeholder);
       ElMessage.error(placeholder.value);
       return;
     }
