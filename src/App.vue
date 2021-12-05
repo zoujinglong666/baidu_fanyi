@@ -48,6 +48,7 @@ const translate = async () => {
     url: "/api/trans/vip/translate",
     data: Qs.stringify(data),
   });
+  console.log(res);
   if (!q.value) {
     console.log(placeholder);
     ElMessage.error(placeholder.value);
@@ -72,6 +73,7 @@ const translate = async () => {
       name = name.split(",").join("");
       // 处理撇号 如i'm
       name = name.split("'").join("");
+      name = name.split("?").join("");
       r.value = name;
       console.log(r.value);
       // 自动复制
@@ -93,6 +95,10 @@ const translate = async () => {
 };
 </script>
 <style>
+body {
+  background-image: url("./assets/bg.jpg");
+  background-size: cover;
+}
 .el-card {
   width: 500px;
   min-width: 300px;
