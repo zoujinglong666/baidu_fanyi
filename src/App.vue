@@ -55,6 +55,7 @@
     if (res.status === 200) {
       if (res.data.error_code === '54003') {
         ElMessage.error('请求百度翻译接口过于频繁，请控制在1s左右');
+        console.log("测试")
 
       } else {
         // 驼峰命名
@@ -122,6 +123,6 @@
   .content{
     display: flex;
     justify-content: center;
-    margin-top: 200px;
+    margin: 200px 0;
   }
 </style>
